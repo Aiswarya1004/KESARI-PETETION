@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Great Kesari Petition 🍮💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.9.2/confetti.browser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+:root{
+  --pink:#ffd6e8; --pink-d:#ff8fb8; --peach:#ffe3cf; --butter:#fff3c4; --lav:#e6d9ff;
+  --text:#6b4a5a; --cream:#fff7f0;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:inherit}
+html{scroll-behavior:smooth; scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0; font-family:'Quicksand',sans-serif; background:linear-gradient(160deg,var(--cream),var(--pink) 60%,var(--lav)); color:var(--text); overflow-x:hidden}
+h1,h2,.headfont{font-family:'Baloo 2',cursive}
+.wrap{max-width:720px; margin:0 auto; padding:24px 18px 60px}
+.card{background:#fffaf5; border-radius:28px; padding:28px 22px; box-shadow:0 10px 30px rgba(255,140,180,.25); position:relative; margin-bottom:28px}
+.pill{display:inline-block; padding:8px 18px; border-radius:999px; background:var(--butter); font-weight:700; font-size:.85rem; letter-spacing:.5px}
+.center{text-align:center}
+.emoji-row{font-size:1.6rem; margin:8px 0}
+.big-title{font-size:clamp(1.6rem,5vw,2.4rem); margin:14px 0 6px; color:#e04b7d}
+.subtitle{font-size:1rem; opacity:.85}
+.bowl{font-size:5rem; display:inline-block; animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-10px) rotate(3deg)}}
+.notice{background:#fff0f5; border:2px dashed var(--pink-d); border-radius:16px; padding:10px 14px; font-weight:700; color:#d1447a; animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+button{font-family:inherit; cursor:pointer; border:none}
+.btn-main{background:var(--pink-d); color:#fff; font-weight:700; padding:14px 30px; border-radius:999px; font-size:1.05rem; box-shadow:0 6px 18px rgba(255,90,140,.4); transition:transform .15s}
+.btn-main:hover{transform:scale(1.05)}
+.btn-yellow{background:var(--butter); color:#8a6d1f; font-weight:700; padding:14px 26px; border-radius:999px; box-shadow:0 6px 16px rgba(255,200,80,.4); position:relative; transition:transform .12s, top .2s, left .2s}
+label.check{display:flex; gap:10px; align-items:flex-start; margin:12px 0; font-weight:600; font-size:.95rem}
+label.check input{margin-top:3px; accent-color:var(--pink-d); width:18px; height:18px}
+.field{width:100%; padding:12px 14px; border-radius:14px; border:2px solid #ffd0e2; font-family:inherit; font-size:1rem; background:#fff}
+.detail-row{display:flex; justify-content:space-between; gap:10px; padding:6px 0; border-bottom:1px dashed #ffe0ec; font-size:.95rem; flex-wrap:wrap}
+.detail-row b{color:#c94270}
+.reason{background:var(--peach); border-radius:16px; padding:14px; margin:14px 0; font-style:italic}
+.btn-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:22px; position:relative; min-height:70px}
+.sparkle{position:absolute; font-size:1.2rem; animation:spin 3s linear infinite; opacity:.7}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.funny-msg{text-align:center; color:#d1447a; font-weight:700; margin-top:10px; min-height:24px}
+.hidden{display:none}
+.cert{background:linear-gradient(135deg,#fff9ef,#fff1de); border:4px double #e0b45a; border-radius:22px; padding:34px 22px; text-align:center; position:relative}
+.seal{display:inline-block; background:var(--pink-d); color:#fff; border-radius:50%; width:110px; height:110px; line-height:1.1; padding-top:30px; font-weight:700; font-size:.85rem; box-shadow:0 6px 20px rgba(255,90,140,.5); animation:seal-in .6s ease}
+@keyframes seal-in{from{transform:scale(0) rotate(-30deg)}to{transform:scale(1) rotate(-8deg)}}
+.footer{text-align:center; font-size:.85rem; opacity:.75; margin-top:20px}
+.float-emoji{position:fixed; pointer-events:none; font-size:1.4rem; animation:floatup 3.5s linear forwards; z-index:99}
+@keyframes floatup{from{transform:translateY(0); opacity:1}to{transform:translateY(-90vh); opacity:0}}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--text:#3a2530}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="card center" id="landing">
+    <span class="pill">🌸 A VERY IMPORTANT PETITION 🌸</span>
+    <h1 class="big-title">Dear Latha Mam,<br>Will You Please Make Me Kesari? 🥺</h1>
+    <p class="subtitle">An extremely serious request submitted by your favourite student (hopefully), Aiswarya 💌</p>
+    <div class="bowl">🍮😊</div>
+    <div class="emoji-row">🌟 💗 🌸 💗 🌟</div>
+    <p class="notice">🚨 Urgent: Birthday Kesari Request Pending Approval!</p>
+    <br>
+    <button class="btn-main" onclick="document.getElementById('petition').scrollIntoView()">Open My Petition 💗</button>
+  </div>
+
+  <div class="card" id="petition">
+    <h2 class="headfont center" style="color:#e04b7d">Official Kesari Request Form</h2>
+    <div class="detail-row"><span>Petitioner</span><b>Aiswarya</b></div>
+    <div class="detail-row"><span>Recipient</span><b>Latha Mam</b></div>
+    <div class="detail-row"><span>Occasion</span><b>Your Birthday 🎂</b></div>
+    <div class="detail-row"><span>Requested Item</span><b>One delicious bowl of homemade kesari 🍮</b></div>
+    <div class="reason">"Because birthdays are incomplete without kesari, and nobody makes it as special as you do, Latha Mam!"</div>
+
+    <label class="check"><input type="checkbox" class="cb"> I promise to be extra sweet (just like kesari).</label>
+    <label class="check"><input type="checkbox" class="cb"> I will add extra cashews </label>
+    <label class="check"><input type="checkbox" class="cb"> I solemnly swear that this request comes straight from my heart.</label>
+
+    <input class="field" id="sig" placeholder="Sign your name, Latha Mam, to approve this request…" style="margin-top:14px">
+
+    <div class="btn-row">
+      <button class="btn-main" id="approveBtn" onclick="approve()">APPROVE &amp; MAKE KESARI 💗</button>
+      <button class="btn-yellow" id="thinkBtn" onclick="think(event)">I NEED TO THINK… 🤔</button>
+    </div>
+    <p class="funny-msg" id="funnyMsg"></p>
+  </div>
+
+  <div class="card cert hidden" id="certCard">
+    <div id="certContent">
+      <h2 class="headfont" style="color:#c94270">OFFICIAL KESARI PROMISE CERTIFICATE 🏆</h2>
+      <p style="max-width:480px;margin:14px auto;font-weight:600">This certifies that Latha Mam has officially agreed to make delicious kesari for Aiswarya on the occasion of her birthday!</p>
+      <div class="detail-row" style="max-width:360px;margin:0 auto"><span>Approved by</span><b id="approverName">Latha Mam</b></div>
+      <div class="detail-row" style="max-width:360px;margin:0 auto"><span>Requested by</span><b>Aiswarya</b></div>
+      <div class="detail-row" style="max-width:360px;margin:0 auto"><span>Status</span><b>APPROVED WITH EXTRA SWEETNESS 💗</b></div>
+      <br>
+      <div class="seal">100% SWEET<br>PROMISE</div>
+      <h2 class="headfont" style="margin-top:18px">YAYYYYY! Aiswarya's Kesari Dreams<br>Are Coming True! 🍮</h2>
+    </div>
+    <br>
+    
+    <button class="btn-yellow" onclick="sendWhatsapp()">Send My Confirmation to Aiswarya 💌</button>
+  
+  </div>
+
+  <div class="footer">
+    Made with 1000% love, sweetness 💗<br>
+    Petition submitted by Aiswarya | Specially for Latha Mam 🌸<br>
+    <span style="display:inline-block;margin-top:6px;font-size:1.6rem;animation:bob 2s ease-in-out infinite">🍮👋</span>
+  </div>
+</div>
+
+<script>
+const messages = ["But Mammmm, it's your birthday! 🥺","Aiswarya is waiting with a spoon!","The kesari committee is getting impatient!","One small bowl? Pretty please? 🍮"];
+let mi = 0;
+function think(e){
+  document.getElementById('funnyMsg').textContent = messages[mi % messages.length];
+  mi++;
+  const btn = e.target;
+  const dx = (Math.random()*140-70), dy = (Math.random()*30-15);
+  btn.style.position='relative';
+  btn.style.left = dx+'px';
+  btn.style.top = dy+'px';
+}
+function approve(){
+  const name = document.getElementById('sig').value.trim() || "Latha Mam";
+  document.getElementById('approverName').textContent = name;
+  document.getElementById('petition').classList.add('hidden');
+  const cert = document.getElementById('certCard');
+  cert.classList.remove('hidden');
+  cert.scrollIntoView({behavior:'smooth'});
+  try{
+    confetti({particleCount:150, spread:90, origin:{y:0.6}, colors:['#ff8fb8','#ffe3cf','#fff3c4','#e6d9ff']});
+    setTimeout(()=>confetti({particleCount:80, spread:120, origin:{y:0.4}}),400);
+  }catch(e){}
+  const hearts=['💗','💕','✨','🌸','🍮'];
+  for(let i=0;i<16;i++){
+    setTimeout(()=>{
+      const s=document.createElement('div');
+      s.className='float-emoji';
+      s.textContent=hearts[Math.floor(Math.random()*hearts.length)];
+      s.style.left=(Math.random()*90)+'vw';
+      s.style.bottom='0px';
+      document.body.appendChild(s);
+      setTimeout(()=>s.remove(),3600);
+    }, i*120);
+  }
+}
+function downloadCert(){
+  const el = document.getElementById('certCard');
+  if(window.html2canvas){
+    html2canvas(el,{backgroundColor:'#fff9ef',scale:2}).then(canvas=>{
+      const link=document.createElement('a');
+      link.download='kesari-petition-certificate.png';
+      link.href=canvas.toDataURL('image/png');
+      link.click();
+    }).catch(()=>alert('Could not generate image — please screenshot the certificate instead 💗'));
+  }else{
+    alert('Could not generate image — please screenshot the certificate instead 💗');
+  }
+}
+function sendWhatsapp(){
+  const phone = "7305258804"; // e.g. "919999999999" — leave blank to just open WhatsApp chooser
+  const text = encodeURIComponent("Hi Aiswarya! 💗 Your kesari petition has been approved! Latha Mam promises to make you delicious kesari for her birthday! 🍮🎂");
+  const url = phone ? `https://wa.me/${phone}?text=${text}` : `https://wa.me/?text=${text}`;
+  window.open(url,'_blank');
+}
+</script>
+</body>
+</html>
